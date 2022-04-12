@@ -43,7 +43,8 @@ namespace ISVT
 
         private void NavigatorAddButton_Click(object sender, EventArgs e)
         {
-            generalBindingSource.Add();
+            generalBindingSource.AddNew();
+            generalDataGridView.CurrentRow.Cells[0].Value = (int)dataSet1.Tables["General"].Compute("MAX(ID)",null) + 1;
         }
     }
 }
