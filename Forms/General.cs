@@ -22,14 +22,11 @@ namespace ISVT
             Validate();
             generalBindingSource.EndEdit();
             tableAdapterManager.UpdateAll(dataSet1);
-
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataSet1.General". При необходимости она может быть перемещена или удалена.
             generalTableAdapter.Fill(dataSet1.General);
-
         }
 
         private void NavigatorDeleteButton_Click(object sender, EventArgs e)
@@ -43,8 +40,21 @@ namespace ISVT
 
         private void NavigatorAddButton_Click(object sender, EventArgs e)
         {
+            roomTextBox.Focus();
             generalBindingSource.AddNew();
-            generalDataGridView.CurrentRow.Cells[0].Value = (int)dataSet1.Tables["General"].Compute("MAX(ID)",null) + 1;
+            try
+            {
+                generalDataGridView.CurrentRow.Cells[0].Value = (int)dataSet1.Tables["General"].Compute("MAX(ID)", null) + 1;
+            }
+            catch
+            {
+                generalDataGridView.CurrentRow.Cells[0].Value = 1;
+            }
+        }
+
+        private void generalDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show("Заполните все значения!","Ошибка",MessageBoxButtons.OK,MessageBoxIcon.Warning);
         }
     }
 }
