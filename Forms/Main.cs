@@ -22,5 +22,10 @@ namespace ISVT
             General form = new General();
             form.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            generalToolStripMenuItem_Click(sender,e);
+        }
     }
 }
