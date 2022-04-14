@@ -1,6 +1,6 @@
 ﻿namespace ISVT
 {
-    partial class Form2
+    partial class ComponentsT
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             System.Windows.Forms.Label iDComputersLabel;
             System.Windows.Forms.Label descriptionLabel;
             System.Windows.Forms.Label priceLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComponentsT));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
@@ -44,8 +44,8 @@
             this.generalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.generalTableAdapter = new ISVT.DataSet1TableAdapters.GeneralTableAdapter();
             this.tableAdapterManager = new ISVT.DataSet1TableAdapters.TableAdapterManager();
-            this.componentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.componentsTableAdapter = new ISVT.DataSet1TableAdapters.ComponentsTableAdapter();
+            this.componentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.componentsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +63,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.componentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.componentsDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // iDComputersLabel
+            // 
+            iDComputersLabel.AutoSize = true;
+            iDComputersLabel.Location = new System.Drawing.Point(461, 31);
+            iDComputersLabel.Name = "iDComputersLabel";
+            iDComputersLabel.Size = new System.Drawing.Size(71, 13);
+            iDComputersLabel.TabIndex = 11;
+            iDComputersLabel.Text = "IDComputers:";
+            // 
+            // descriptionLabel
+            // 
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new System.Drawing.Point(461, 57);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new System.Drawing.Size(63, 13);
+            descriptionLabel.TabIndex = 13;
+            descriptionLabel.Text = "Description:";
+            // 
+            // priceLabel
+            // 
+            priceLabel.AutoSize = true;
+            priceLabel.Location = new System.Drawing.Point(461, 83);
+            priceLabel.Name = "priceLabel";
+            priceLabel.Size = new System.Drawing.Size(34, 13);
+            priceLabel.TabIndex = 15;
+            priceLabel.Text = "Price:";
             // 
             // toolStrip1
             // 
@@ -86,6 +113,7 @@
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
             this.toolStripTextBox1.Text = "0";
@@ -146,14 +174,14 @@
             this.tableAdapterManager.GeneralTableAdapter = this.generalTableAdapter;
             this.tableAdapterManager.UpdateOrder = ISVT.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // componentsTableAdapter
+            // 
+            this.componentsTableAdapter.ClearBeforeFill = true;
+            // 
             // componentsBindingSource
             // 
             this.componentsBindingSource.DataMember = "Components";
             this.componentsBindingSource.DataSource = this.dataSet1;
-            // 
-            // componentsTableAdapter
-            // 
-            this.componentsTableAdapter.ClearBeforeFill = true;
             // 
             // componentsDataGridView
             // 
@@ -198,15 +226,6 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Price";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // iDComputersLabel
-            // 
-            iDComputersLabel.AutoSize = true;
-            iDComputersLabel.Location = new System.Drawing.Point(461, 31);
-            iDComputersLabel.Name = "iDComputersLabel";
-            iDComputersLabel.Size = new System.Drawing.Size(71, 13);
-            iDComputersLabel.TabIndex = 11;
-            iDComputersLabel.Text = "IDComputers:";
-            // 
             // iDComputersTextBox
             // 
             this.iDComputersTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.componentsBindingSource, "IDComputers", true));
@@ -214,15 +233,6 @@
             this.iDComputersTextBox.Name = "iDComputersTextBox";
             this.iDComputersTextBox.Size = new System.Drawing.Size(100, 20);
             this.iDComputersTextBox.TabIndex = 12;
-            // 
-            // descriptionLabel
-            // 
-            descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(461, 57);
-            descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(63, 13);
-            descriptionLabel.TabIndex = 13;
-            descriptionLabel.Text = "Description:";
             // 
             // descriptionTextBox
             // 
@@ -232,15 +242,6 @@
             this.descriptionTextBox.Size = new System.Drawing.Size(100, 20);
             this.descriptionTextBox.TabIndex = 14;
             // 
-            // priceLabel
-            // 
-            priceLabel.AutoSize = true;
-            priceLabel.Location = new System.Drawing.Point(461, 83);
-            priceLabel.Name = "priceLabel";
-            priceLabel.Size = new System.Drawing.Size(34, 13);
-            priceLabel.TabIndex = 15;
-            priceLabel.Text = "Price:";
-            // 
             // priceTextBox
             // 
             this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.componentsBindingSource, "Price", true));
@@ -249,7 +250,7 @@
             this.priceTextBox.Size = new System.Drawing.Size(100, 20);
             this.priceTextBox.TabIndex = 16;
             // 
-            // Form2
+            // ComponentsT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -262,7 +263,7 @@
             this.Controls.Add(this.priceTextBox);
             this.Controls.Add(this.componentsDataGridView);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "Form2";
+            this.Name = "ComponentsT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Компоненты";
             this.Load += new System.EventHandler(this.Form2_Load);

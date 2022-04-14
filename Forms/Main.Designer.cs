@@ -77,12 +77,14 @@
             this.computersToolStripMenuItem.Name = "computersToolStripMenuItem";
             this.computersToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.computersToolStripMenuItem.Text = "Вычислительная техника";
+            this.computersToolStripMenuItem.Click += new System.EventHandler(this.computersToolStripMenuItem_Click);
             // 
             // componentsToolStripMenuItem
             // 
             this.componentsToolStripMenuItem.Name = "componentsToolStripMenuItem";
             this.componentsToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.componentsToolStripMenuItem.Text = "Компоненты";
+            this.componentsToolStripMenuItem.Click += new System.EventHandler(this.componentsToolStripMenuItem_Click);
             // 
             // label3
             // 
@@ -100,7 +102,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(159, 173);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -109,7 +111,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(159, 173);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 

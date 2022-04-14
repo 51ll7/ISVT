@@ -15,6 +15,7 @@ namespace ISVT
         public General()
         {
             InitializeComponent();
+            
         }
 
         private void NavigatorSaveButton_Click(object sender, EventArgs e)
@@ -55,6 +56,13 @@ namespace ISVT
         private void generalDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             MessageBox.Show("Заполните все значения!","Ошибка",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+        }
+
+        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            generalDataGridView.DataSource = dataSet1.General;                                           //Поиск по частичному совпадению
+            (generalDataGridView.DataSource as DataTable).DefaultView.RowFilter = string.Format("Convert(ID,'System.String') like '{0}%' OR Room like '{0}%' OR Convert(Quantity,'System.String') like '{0}%'", toolStripTextBox1.Text);
+            //generalBindingSource.Position = generalBindingSource.Find("Room", toolStripTextBox1.Text); //Поиск по полному совпадению
         }
     }
 }

@@ -19,13 +19,35 @@ namespace ISVT
 
         private void generalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            General form = new General();
-            form.Show();
+            General formGeneral = new General();
+            formGeneral.Show();
+        }
+
+        private void computersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Computers formComputers = new Computers();
+            formComputers.Show();
+        }
+
+        private void componentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ComponentsT formComponentsT = new ComponentsT();
+            formComponentsT.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             generalToolStripMenuItem_Click(sender,e);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            computersToolStripMenuItem_Click(sender, e);
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            componentsToolStripMenuItem_Click(sender, e);
         }
     }
 }

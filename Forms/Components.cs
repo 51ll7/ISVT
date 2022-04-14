@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ISVT
 {
-    public partial class Form2 : Form
+    public partial class ComponentsT : Form
     {
-        public Form2()
+        public ComponentsT()
         {
             InitializeComponent();
         }
