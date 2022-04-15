@@ -49,5 +49,15 @@ namespace ISVT
         {
             componentsToolStripMenuItem_Click(sender, e);
         }
+
+        private void pictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            ((PictureBox)sender).Size = new Size(((PictureBox)sender).Size.Width - 10, ((PictureBox)sender).Size.Height - 10);
+        }
+
+        private void pictureBox_MouseEnter(object sender, EventArgs e)
+        {
+            ((PictureBox)sender).Size = new Size(((PictureBox)sender).Size.Width + 10, ((PictureBox)sender).Size.Height + 10);
+        }
     }
 }

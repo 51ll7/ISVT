@@ -33,6 +33,11 @@
             System.Windows.Forms.Label quantityLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(General));
             this.generalDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new ISVT.DataSet1();
             this.roomTextBox = new System.Windows.Forms.TextBox();
             this.quantityTextBox = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -42,19 +47,14 @@
             this.NavigatorAddButton = new System.Windows.Forms.ToolStripButton();
             this.NavigatorDeleteButton = new System.Windows.Forms.ToolStripButton();
             this.NavigatorSaveButton = new System.Windows.Forms.ToolStripButton();
-            this.generalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new ISVT.DataSet1();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generalTableAdapter = new ISVT.DataSet1TableAdapters.GeneralTableAdapter();
             this.tableAdapterManager = new ISVT.DataSet1TableAdapters.TableAdapterManager();
             roomLabel = new System.Windows.Forms.Label();
             quantityLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.generalDataGridView)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // roomLabel
@@ -93,6 +93,34 @@
             this.generalDataGridView.Size = new System.Drawing.Size(343, 220);
             this.generalDataGridView.TabIndex = 1;
             this.generalDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.generalDataGridView_DataError);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Room";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Room";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Quantity";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // generalBindingSource
+            // 
+            this.generalBindingSource.DataMember = "General";
+            this.generalBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // roomTextBox
             // 
@@ -135,7 +163,6 @@
             this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
-            this.toolStripTextBox1.Text = "0";
             this.toolStripTextBox1.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
             // 
             // toolStripSeparator2
@@ -175,34 +202,6 @@
             this.NavigatorSaveButton.ToolTipText = "Сохранить";
             this.NavigatorSaveButton.Click += new System.EventHandler(this.NavigatorSaveButton_Click);
             // 
-            // generalBindingSource
-            // 
-            this.generalBindingSource.DataMember = "General";
-            this.generalBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Room";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Room";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Quantity";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Quantity";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
             // generalTableAdapter
             // 
             this.generalTableAdapter.ClearBeforeFill = true;
@@ -231,10 +230,10 @@
             this.Text = "Общая информация";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.generalDataGridView)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
