@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Computers));
             System.Windows.Forms.Label iDRoomLabel;
             System.Windows.Forms.Label descriptionLabel;
             System.Windows.Forms.Label priceLabel;
             System.Windows.Forms.Label receivingDateLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Computers));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
@@ -65,8 +65,46 @@
             ((System.ComponentModel.ISupportInitialize)(this.computersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
+            // iDRoomLabel
+            // 
+            iDRoomLabel.AutoSize = true;
+            iDRoomLabel.Location = new System.Drawing.Point(561, 31);
+            iDRoomLabel.Name = "iDRoomLabel";
+            iDRoomLabel.Size = new System.Drawing.Size(49, 13);
+            iDRoomLabel.TabIndex = 12;
+            iDRoomLabel.Text = "IDRoom:";
+            // 
+            // descriptionLabel
+            // 
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new System.Drawing.Point(561, 57);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new System.Drawing.Size(63, 13);
+            descriptionLabel.TabIndex = 14;
+            descriptionLabel.Text = "Description:";
+            // 
+            // priceLabel
+            // 
+            priceLabel.AutoSize = true;
+            priceLabel.Location = new System.Drawing.Point(561, 83);
+            priceLabel.Name = "priceLabel";
+            priceLabel.Size = new System.Drawing.Size(34, 13);
+            priceLabel.TabIndex = 16;
+            priceLabel.Text = "Price:";
+            // 
+            // receivingDateLabel
+            // 
+            receivingDateLabel.AutoSize = true;
+            receivingDateLabel.Location = new System.Drawing.Point(561, 110);
+            receivingDateLabel.Name = "receivingDateLabel";
+            receivingDateLabel.Size = new System.Drawing.Size(84, 13);
+            receivingDateLabel.TabIndex = 18;
+            receivingDateLabel.Text = "Receiving Date:";
+            // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
             this.toolStripTextBox1,
@@ -87,9 +125,11 @@
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
-            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 24);
+            this.toolStripTextBox1.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
             // 
             // toolStripSeparator2
             // 
@@ -104,6 +144,7 @@
             this.NavigatorAddButton.Name = "NavigatorAddButton";
             this.NavigatorAddButton.Size = new System.Drawing.Size(23, 22);
             this.NavigatorAddButton.Text = "Добавить";
+            this.NavigatorAddButton.Click += new System.EventHandler(this.NavigatorAddButton_Click);
             // 
             // NavigatorDeleteButton
             // 
@@ -114,6 +155,7 @@
             this.NavigatorDeleteButton.Size = new System.Drawing.Size(23, 22);
             this.NavigatorDeleteButton.Text = "toolStripButton2";
             this.NavigatorDeleteButton.ToolTipText = "Удалить";
+            this.NavigatorDeleteButton.Click += new System.EventHandler(this.NavigatorDeleteButton_Click);
             // 
             // NavigatorSaveButton
             // 
@@ -124,6 +166,7 @@
             this.NavigatorSaveButton.Size = new System.Drawing.Size(23, 22);
             this.NavigatorSaveButton.Text = "toolStripButton3";
             this.NavigatorSaveButton.ToolTipText = "Сохранить";
+            this.NavigatorSaveButton.Click += new System.EventHandler(this.computersBindingNavigatorSaveItem_Click);
             // 
             // dataSet1
             // 
@@ -153,6 +196,7 @@
             this.computersDataGridView.AllowUserToDeleteRows = false;
             this.computersDataGridView.AllowUserToResizeRows = false;
             this.computersDataGridView.AutoGenerateColumns = false;
+            this.computersDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.computersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.computersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -164,8 +208,9 @@
             this.computersDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.computersDataGridView.Location = new System.Drawing.Point(12, 28);
             this.computersDataGridView.Name = "computersDataGridView";
-            this.computersDataGridView.Size = new System.Drawing.Size(543, 220);
+            this.computersDataGridView.Size = new System.Drawing.Size(541, 220);
             this.computersDataGridView.TabIndex = 10;
+            this.computersDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.computersDataGridView_DataError);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -197,70 +242,36 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "ReceivingDate";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // iDRoomLabel
-            // 
-            iDRoomLabel.AutoSize = true;
-            iDRoomLabel.Location = new System.Drawing.Point(561, 28);
-            iDRoomLabel.Name = "iDRoomLabel";
-            iDRoomLabel.Size = new System.Drawing.Size(49, 13);
-            iDRoomLabel.TabIndex = 12;
-            iDRoomLabel.Text = "IDRoom:";
-            // 
             // iDRoomTextBox
             // 
             this.iDRoomTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.computersBindingSource, "IDRoom", true));
-            this.iDRoomTextBox.Location = new System.Drawing.Point(651, 25);
+            this.iDRoomTextBox.Location = new System.Drawing.Point(651, 28);
             this.iDRoomTextBox.Name = "iDRoomTextBox";
             this.iDRoomTextBox.Size = new System.Drawing.Size(200, 20);
             this.iDRoomTextBox.TabIndex = 13;
             // 
-            // descriptionLabel
-            // 
-            descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(561, 54);
-            descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(63, 13);
-            descriptionLabel.TabIndex = 14;
-            descriptionLabel.Text = "Description:";
-            // 
             // descriptionTextBox
             // 
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.computersBindingSource, "Description", true));
-            this.descriptionTextBox.Location = new System.Drawing.Point(651, 51);
+            this.descriptionTextBox.Location = new System.Drawing.Point(651, 54);
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(200, 20);
             this.descriptionTextBox.TabIndex = 15;
             // 
-            // priceLabel
-            // 
-            priceLabel.AutoSize = true;
-            priceLabel.Location = new System.Drawing.Point(561, 80);
-            priceLabel.Name = "priceLabel";
-            priceLabel.Size = new System.Drawing.Size(34, 13);
-            priceLabel.TabIndex = 16;
-            priceLabel.Text = "Price:";
-            // 
             // priceTextBox
             // 
             this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.computersBindingSource, "Price", true));
-            this.priceTextBox.Location = new System.Drawing.Point(651, 77);
+            this.priceTextBox.Location = new System.Drawing.Point(651, 80);
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(200, 20);
             this.priceTextBox.TabIndex = 17;
             // 
-            // receivingDateLabel
-            // 
-            receivingDateLabel.AutoSize = true;
-            receivingDateLabel.Location = new System.Drawing.Point(561, 107);
-            receivingDateLabel.Name = "receivingDateLabel";
-            receivingDateLabel.Size = new System.Drawing.Size(84, 13);
-            receivingDateLabel.TabIndex = 18;
-            receivingDateLabel.Text = "Receiving Date:";
-            // 
             // receivingDateDateTimePicker
             // 
+            this.receivingDateDateTimePicker.CustomFormat = "dd\'.\'MM\'.\'yyyy HH\':\'mm tt";
             this.receivingDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.computersBindingSource, "ReceivingDate", true));
-            this.receivingDateDateTimePicker.Location = new System.Drawing.Point(651, 103);
+            this.receivingDateDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.receivingDateDateTimePicker.Location = new System.Drawing.Point(651, 106);
             this.receivingDateDateTimePicker.Name = "receivingDateDateTimePicker";
             this.receivingDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.receivingDateDateTimePicker.TabIndex = 19;
@@ -269,6 +280,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(863, 261);
             this.Controls.Add(iDRoomLabel);
             this.Controls.Add(this.iDRoomTextBox);
@@ -280,9 +292,12 @@
             this.Controls.Add(this.receivingDateDateTimePicker);
             this.Controls.Add(this.computersDataGridView);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Computers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вычислительная техника";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Computers_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

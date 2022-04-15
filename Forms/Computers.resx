@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="iDRoomLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="descriptionLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="priceLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="receivingDateLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -156,16 +168,28 @@
   <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>592, 17</value>
   </metadata>
-  <metadata name="iDRoomLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="descriptionLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="priceLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="receivingDateLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAMQOAADEDgAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAISEh/yEhIf8hISH/ISEh/yEhIf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISEh/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAhISHgISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh4AAA
+        AAAAAAAAAAAAAAAAAAAAAAAAISEh/x4eHhkeHh4ZHh4eGR4eHhkeHh4ZHh4eGR4eHhkeHh4ZHh4eGSEh
+        If8AAAAAISEh/yEhIf8hISHgAAAAACEhIf8eHh4ZHh4eGR4eHhkeHh4ZHh4eGR4eHhkeHh4ZHh4eGR4e
+        HhkhISH/AAAAAB4eHhkeHh4ZISEh/wAAAAAhISH/Hh4eGR4eHhkeHh4ZHh4eGR4eHhkeHh4ZHh4eGR4e
+        HhkeHh4ZISEh/wAAAAAhISHFHh4eGSEhIf8AAAAAISEh/x4eHhkeHh4ZHh4eGR4eHhkeHh4ZHh4eGR4e
+        HhkeHh4ZHh4eGSEhIf8AAAAAHh4eGR4eHhkhISH/AAAAACEhIf8eHh4ZHh4eGR4eHhkeHh4ZHh4eGR4e
+        HhkeHh4ZHh4eGR4eHhkhISH/AAAAACEhIcUeHh4ZISEh/wAAAAAhISHgISEh/yEhIf8hISH/ISEh/yEh
+        If8hISH/ISEh/yEhIf8hISH/ISEh4AAAAAAeHh4ZHh4eGSEhIf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkJCQOHh4eGR4eHhkhISH/AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAISEh/x4eHhkeHh4ZHh4eGR4eHhkeHh4ZISEh/wAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAACEhIf8eHh4ZISEhxSEhIcUhISHFHh4eGSEhIf8AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhISH/Hh4eGR4eHhkeHh4ZHh4eGR4eHhkhISH/AAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAg+R8fHykeHh4ZHh4eGR4eHhkeHh4qICAg+AAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAgIIcgICD5ISEh/yEhIf8hISH/ICAg+SAg
+        IIYAAAAA//9vc+D/dCD7/0wgAB9ydgARXEMAEWVuABFTRAART0QAEVwxABFcVP/hbHP/AWlu/wE7Q/8B
+        VXP/AXNc/wFlbQ==
+</value>
+  </data>
 </root>

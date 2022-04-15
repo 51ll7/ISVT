@@ -126,6 +126,12 @@
   <metadata name="generalBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>116, 17</value>
   </metadata>
+  <metadata name="generalBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>116, 17</value>
+  </metadata>
+  <metadata name="dataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="dataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -162,4 +168,28 @@
   <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>453, 17</value>
   </metadata>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAMQOAADEDgAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAhISGoISEhvyEhIb8hISG/ISEhqAAAAAAAAAAAISEhqCEhIb8hISG/ISEhvyEh
+        IagAAAAAAAAAAAAAAAAAAAAAISEhvxoaGhMaGhoTGhoaEyEhIb8AAAAAAAAAACEhIb8aGhoTGhoaExoa
+        GhMhISG/AAAAAAAAAAAAAAAAAAAAACEhIb8aGhoTGhoaExoaGhMhISG/AAAAAAAAAAAhISG/GhoaExoa
+        GhMaGhoTISEhvwAAAAAAAAAAAAAAAAAAAAAhISG/GhoaExoaGhMaGhoTISEhvwAAAAAAAAAAISEhvxoa
+        GhMaGhoTGhoaEyEhIb8AAAAAAAAAAAAAAAAAAAAAISEhvxoaGhMaGhoTGhoaEyEhIakhISG/ISEhvyEh
+        IakaGhoTGhoaExoaGhMhISG/AAAAAAAAAAAAAAAAICAgHyEhIb8aGhoTGhoaExoaGhMaGhoTGhoaExoa
+        GhMaGhoTGhoaExoaGhMaGhoTISEhvx8fHyAAAAAAHx8fICAgIOkgICCsGhoaExoaGhMaGhoTGhoaExoa
+        GhMaGhoTGhoaExoaGhMaGhoTGhoaEyAgIK0gICDpHx8fIAAAAAAiIiI8ICAg6h4eHksaGhoTGhoaExoa
+        GhMaGhoTGhoaExoaGhMaGhoTGhoaEx8fH0ggICDqIiIiQgAAAAAAAAAAAAAAACEhIT0gICDpHh4eSxoa
+        GhMaGhoTGhoaExoaGhMaGhoTGhoaEx8fH0ggICDpIiIiQgAAAAAAAAAAAAAAAAAAAAAAAAAAISEhPSAg
+        IOkeHh5LGhoaExoaGhMaGhoTGhoaEx8fH0ggICDpIiIiQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAhISE9ICAg6R4eHksaGhoTGhoaEx8fH0kgICDpHx8fQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAACEhIT0gICDpHx8fSh8fH0kgICDpHx8fQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAIiIiQiAgIOkgICDpISEhPQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAvIiIiLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA//9vc8GDdCDBg0wgwYNydsGDXEPAA2VugAFTRAAAT0SAAVwxwANcVOAHbHPwD2lu+B87Q/w/
+        VXP+f3Nc//9lbQ==
+</value>
+  </data>
 </root>

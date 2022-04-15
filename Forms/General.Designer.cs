@@ -81,6 +81,7 @@
             this.generalDataGridView.AllowUserToDeleteRows = false;
             this.generalDataGridView.AllowUserToResizeRows = false;
             this.generalDataGridView.AutoGenerateColumns = false;
+            this.generalDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.generalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.generalDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -90,7 +91,7 @@
             this.generalDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.generalDataGridView.Location = new System.Drawing.Point(12, 28);
             this.generalDataGridView.Name = "generalDataGridView";
-            this.generalDataGridView.Size = new System.Drawing.Size(343, 220);
+            this.generalDataGridView.Size = new System.Drawing.Size(341, 220);
             this.generalDataGridView.TabIndex = 1;
             this.generalDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.generalDataGridView_DataError);
             // 
@@ -140,6 +141,8 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
             this.toolStripTextBox1,
@@ -149,6 +152,7 @@
             this.NavigatorSaveButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
             this.toolStrip1.Size = new System.Drawing.Size(527, 25);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
@@ -160,6 +164,7 @@
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
@@ -218,6 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(527, 261);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(roomLabel);
@@ -225,9 +231,11 @@
             this.Controls.Add(quantityLabel);
             this.Controls.Add(this.quantityTextBox);
             this.Controls.Add(this.generalDataGridView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "General";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Общая информация";
+            this.Text = "Помещения";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.generalDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generalBindingSource)).EndInit();

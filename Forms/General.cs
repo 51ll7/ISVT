@@ -15,7 +15,7 @@ namespace ISVT
         public General()
         {
             InitializeComponent();
-            
+            toolStrip1.Renderer = new MySR();
         }
 
         private void NavigatorSaveButton_Click(object sender, EventArgs e)

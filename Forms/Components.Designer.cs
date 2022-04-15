@@ -41,8 +41,6 @@
             this.NavigatorDeleteButton = new System.Windows.Forms.ToolStripButton();
             this.NavigatorSaveButton = new System.Windows.Forms.ToolStripButton();
             this.dataSet1 = new ISVT.DataSet1();
-            this.generalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.generalTableAdapter = new ISVT.DataSet1TableAdapters.GeneralTableAdapter();
             this.tableAdapterManager = new ISVT.DataSet1TableAdapters.TableAdapterManager();
             this.componentsTableAdapter = new ISVT.DataSet1TableAdapters.ComponentsTableAdapter();
             this.componentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -59,7 +57,6 @@
             priceLabel = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.componentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.componentsDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +90,8 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
             this.toolStripTextBox1,
@@ -113,10 +112,11 @@
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
-            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
             // 
             // toolStripSeparator2
             // 
@@ -131,6 +131,7 @@
             this.NavigatorAddButton.Name = "NavigatorAddButton";
             this.NavigatorAddButton.Size = new System.Drawing.Size(23, 22);
             this.NavigatorAddButton.Text = "Добавить";
+            this.NavigatorAddButton.Click += new System.EventHandler(this.NavigatorAddButton_Click);
             // 
             // NavigatorDeleteButton
             // 
@@ -141,6 +142,7 @@
             this.NavigatorDeleteButton.Size = new System.Drawing.Size(23, 22);
             this.NavigatorDeleteButton.Text = "toolStripButton2";
             this.NavigatorDeleteButton.ToolTipText = "Удалить";
+            this.NavigatorDeleteButton.Click += new System.EventHandler(this.NavigatorDeleteButton_Click);
             // 
             // NavigatorSaveButton
             // 
@@ -151,27 +153,18 @@
             this.NavigatorSaveButton.Size = new System.Drawing.Size(23, 22);
             this.NavigatorSaveButton.Text = "toolStripButton3";
             this.NavigatorSaveButton.ToolTipText = "Сохранить";
+            this.NavigatorSaveButton.Click += new System.EventHandler(this.componentsBindingNavigatorSaveItem_Click);
             // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "DataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // generalBindingSource
-            // 
-            this.generalBindingSource.DataMember = "General";
-            this.generalBindingSource.DataSource = this.dataSet1;
-            // 
-            // generalTableAdapter
-            // 
-            this.generalTableAdapter.ClearBeforeFill = true;
-            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ComponentsTableAdapter = this.componentsTableAdapter;
             this.tableAdapterManager.ComputersTableAdapter = null;
-            this.tableAdapterManager.GeneralTableAdapter = this.generalTableAdapter;
             this.tableAdapterManager.UpdateOrder = ISVT.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // componentsTableAdapter
@@ -189,6 +182,7 @@
             this.componentsDataGridView.AllowUserToDeleteRows = false;
             this.componentsDataGridView.AllowUserToResizeRows = false;
             this.componentsDataGridView.AutoGenerateColumns = false;
+            this.componentsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.componentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.componentsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -199,8 +193,9 @@
             this.componentsDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.componentsDataGridView.Location = new System.Drawing.Point(12, 28);
             this.componentsDataGridView.Name = "componentsDataGridView";
-            this.componentsDataGridView.Size = new System.Drawing.Size(443, 220);
+            this.componentsDataGridView.Size = new System.Drawing.Size(441, 220);
             this.componentsDataGridView.TabIndex = 9;
+            this.componentsDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.componentsDataGridView_DataError);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -254,6 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(650, 261);
             this.Controls.Add(iDComputersLabel);
             this.Controls.Add(this.iDComputersTextBox);
@@ -263,14 +259,15 @@
             this.Controls.Add(this.priceTextBox);
             this.Controls.Add(this.componentsDataGridView);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ComponentsT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Компоненты";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.componentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.componentsDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -288,8 +285,6 @@
         private System.Windows.Forms.ToolStripButton NavigatorDeleteButton;
         private System.Windows.Forms.ToolStripButton NavigatorSaveButton;
         private DataSet1 dataSet1;
-        private System.Windows.Forms.BindingSource generalBindingSource;
-        private DataSet1TableAdapters.GeneralTableAdapter generalTableAdapter;
         private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private DataSet1TableAdapters.ComponentsTableAdapter componentsTableAdapter;
         private System.Windows.Forms.BindingSource componentsBindingSource;

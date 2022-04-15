@@ -60,4 +60,14 @@ namespace ISVT
             ((PictureBox)sender).Size = new Size(((PictureBox)sender).Size.Width + 10, ((PictureBox)sender).Size.Height + 10);
         }
     }
+    //Код убирающий полоску под toolStrip1
+    public class MySR : ToolStripSystemRenderer
+    {
+        public MySR() { }
+
+        protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e)
+        {
+            //base.OnRenderToolStripBorder(e);
+        }
+    }
 }
