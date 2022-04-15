@@ -61,7 +61,7 @@ namespace ISVT
         private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
         {
             computersDataGridView.DataSource = dataSet1.Computers;                                           //Поиск по частичному совпадению
-            (computersDataGridView.DataSource as DataTable).DefaultView.RowFilter = string.Format("Convert(ID,'System.String') like '{0}%' OR Convert(IDRoom,'System.String') like '{0}%' OR Convert(Quantity,'System.String') like '{0}%' OR Description like '{0}%' Convert(Price,'System.String') like '{0}%' OR Convert(ReceivingDate,'System.String') like '{0}%'", toolStripTextBox1.Text);
+            (computersDataGridView.DataSource as DataTable).DefaultView.RowFilter = string.Format("Convert(ID,'System.String')  like '{0}%' OR Convert(IDRoom,'System.String') like '{0}%' OR Description like '{0}%' OR Convert(ReceivingDate,'System.String') like '%{0}%' OR  Convert(Price,'System.String') like '{0}%'", toolStripTextBox1.Text);
             //computersBindingSource.Position = computersBindingSource.Find("Description", toolStripTextBox1.Text); //Поиск по полному совпадению
         }
     }

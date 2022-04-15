@@ -165,6 +165,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ComponentsTableAdapter = this.componentsTableAdapter;
             this.tableAdapterManager.ComputersTableAdapter = null;
+            this.tableAdapterManager.GeneralTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ISVT.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // componentsTableAdapter
@@ -263,7 +264,6 @@
             this.Name = "ComponentsT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Компоненты";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
