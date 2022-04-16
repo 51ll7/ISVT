@@ -59,7 +59,43 @@ namespace ISVT
         {
             ((PictureBox)sender).Size = new Size(((PictureBox)sender).Size.Width + 10, ((PictureBox)sender).Size.Height + 10);
         }
+
+        // Дополнительный методы //
+        private void selectSortMode(int sortIndex)
+        {
+            Forms.View formView = new Forms.View();
+            formView.toolStripComboBox1.SelectedIndex = sortIndex;
+            formView.Show();
+        }
+        // Дополнительный метод //
+
+        private void помещенияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            selectSortMode(0);
+        }
+
+        private void вычислительнаяТехникаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            selectSortMode(2);
+        }
+
+        private void компонентыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            selectSortMode(4);
+        }
+
+        private void вычислительнаяТехникаToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            selectSortMode(1);
+        }
+
+
+        private void компонентыToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            selectSortMode(3);
+        }
     }
+
     //Код убирающий полоску под toolStrip1
     public class MySR : ToolStripSystemRenderer
     {

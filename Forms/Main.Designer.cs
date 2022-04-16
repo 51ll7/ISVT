@@ -33,6 +33,12 @@
             this.generalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.computersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.componentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.просмотрДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.помещенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вычислительнаяТехникаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вычислительнаяТехникаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.компонентыToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.компонентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,7 +56,8 @@
             this.menuStrip1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tablesToolStripMenuItem});
+            this.tablesToolStripMenuItem,
+            this.просмотрДанныхToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -64,8 +71,8 @@
             this.computersToolStripMenuItem,
             this.componentsToolStripMenuItem});
             this.tablesToolStripMenuItem.Name = "tablesToolStripMenuItem";
-            this.tablesToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.tablesToolStripMenuItem.Text = "Таблицы";
+            this.tablesToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
+            this.tablesToolStripMenuItem.Text = "Редактирование";
             // 
             // generalToolStripMenuItem
             // 
@@ -87,6 +94,55 @@
             this.componentsToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.componentsToolStripMenuItem.Text = "Компоненты";
             this.componentsToolStripMenuItem.Click += new System.EventHandler(this.componentsToolStripMenuItem_Click);
+            // 
+            // просмотрДанныхToolStripMenuItem
+            // 
+            this.просмотрДанныхToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.помещенияToolStripMenuItem,
+            this.вычислительнаяТехникаToolStripMenuItem,
+            this.компонентыToolStripMenuItem});
+            this.просмотрДанныхToolStripMenuItem.Name = "просмотрДанныхToolStripMenuItem";
+            this.просмотрДанныхToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.просмотрДанныхToolStripMenuItem.Text = "Просмотр";
+            // 
+            // помещенияToolStripMenuItem
+            // 
+            this.помещенияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вычислительнаяТехникаToolStripMenuItem1});
+            this.помещенияToolStripMenuItem.Name = "помещенияToolStripMenuItem";
+            this.помещенияToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.помещенияToolStripMenuItem.Text = "Помещения";
+            this.помещенияToolStripMenuItem.Click += new System.EventHandler(this.помещенияToolStripMenuItem_Click);
+            // 
+            // вычислительнаяТехникаToolStripMenuItem1
+            // 
+            this.вычислительнаяТехникаToolStripMenuItem1.Name = "вычислительнаяТехникаToolStripMenuItem1";
+            this.вычислительнаяТехникаToolStripMenuItem1.Size = new System.Drawing.Size(213, 22);
+            this.вычислительнаяТехникаToolStripMenuItem1.Text = "Вычислительная техника";
+            this.вычислительнаяТехникаToolStripMenuItem1.Click += new System.EventHandler(this.вычислительнаяТехникаToolStripMenuItem1_Click);
+            // 
+            // вычислительнаяТехникаToolStripMenuItem
+            // 
+            this.вычислительнаяТехникаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.компонентыToolStripMenuItem1});
+            this.вычислительнаяТехникаToolStripMenuItem.Name = "вычислительнаяТехникаToolStripMenuItem";
+            this.вычислительнаяТехникаToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.вычислительнаяТехникаToolStripMenuItem.Text = "Вычислительная техника";
+            this.вычислительнаяТехникаToolStripMenuItem.Click += new System.EventHandler(this.вычислительнаяТехникаToolStripMenuItem_Click);
+            // 
+            // компонентыToolStripMenuItem1
+            // 
+            this.компонентыToolStripMenuItem1.Name = "компонентыToolStripMenuItem1";
+            this.компонентыToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.компонентыToolStripMenuItem1.Text = "Компоненты";
+            this.компонентыToolStripMenuItem1.Click += new System.EventHandler(this.компонентыToolStripMenuItem1_Click);
+            // 
+            // компонентыToolStripMenuItem
+            // 
+            this.компонентыToolStripMenuItem.Name = "компонентыToolStripMenuItem";
+            this.компонентыToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.компонентыToolStripMenuItem.Text = "Компоненты";
+            this.компонентыToolStripMenuItem.Click += new System.EventHandler(this.компонентыToolStripMenuItem_Click);
             // 
             // pictureBox3
             // 
@@ -122,6 +178,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::ISVT.Properties.Resources.icons8_room_100;
@@ -137,6 +194,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Image = global::ISVT.Properties.Resources.HardDrive;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -149,6 +207,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Image = global::ISVT.Properties.Resources.Computer;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,6 +220,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Image = global::ISVT.Properties.Resources.Home;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -186,6 +246,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Main";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -213,6 +274,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ToolStripMenuItem просмотрДанныхToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem помещенияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вычислительнаяТехникаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem компонентыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вычислительнаяТехникаToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem компонентыToolStripMenuItem1;
     }
 }
 

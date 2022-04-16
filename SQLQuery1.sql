@@ -8,7 +8,7 @@ create table General
 create table Computers
 (
 	ID int primary key NOT NULL IDENTITY(1,1),
-	IDRoom int NOT NULL,
+	IDRoom int references General(ID) NOT NULL,
 	[Description] nvarchar(40) NOT NULL,
 	Price money NOT NULL,
 	ReceivingDate datetime
@@ -16,7 +16,10 @@ create table Computers
 create table Components
 (
 	ID int primary key NOT NULL IDENTITY(1,1),
-	IDComputers int NOT NULL,
+	IDComputers int references Computers(ID) NOT NULL,
 	[Description] nvarchar(40) NOT NULL,
 	Price money NOT NULL
 )
+
+--DBCC CHECKIDENT ('[Computers]', RESEED, 3);
+--GO
