@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ISVT
@@ -32,8 +26,8 @@ namespace ISVT
 
         private void NavigatorDeleteButton_Click(object sender, EventArgs e)
         {
-            DialogResult deleteResult = MessageBox.Show("Точно хотите удалить?", 
-                "Удаление",MessageBoxButtons.YesNo,
+            DialogResult deleteResult = MessageBox.Show("Точно хотите удалить?",
+                "Удаление", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button2);
             if (deleteResult == DialogResult.Yes) generalBindingSource.RemoveCurrent();
@@ -55,7 +49,7 @@ namespace ISVT
 
         private void generalDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            MessageBox.Show("Заполните все значения!","Ошибка",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            MessageBox.Show("Заполните все значения!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void toolStripTextBox1_TextChanged(object sender, EventArgs e)

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ISVT
@@ -26,7 +20,7 @@ namespace ISVT
                 computersBindingSource.EndEdit();
                 tableAdapterManager.UpdateAll(dataSet1);
             }
-            catch(System.Data.SqlClient.SqlException)
+            catch (System.Data.SqlClient.SqlException)
             {
                 MessageBox.Show("Столбец IDRoom вышел за пределы General(ID).\nВведите существующий ID из таблицы помещений", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

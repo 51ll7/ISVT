@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ISVT.Forms
@@ -18,7 +11,7 @@ namespace ISVT.Forms
         }
 
         // Дополнительный метод
-        private void tableLoader()
+        private void TableLoader()
         {
             generalTableAdapter.Fill(dataSet1.General);
             computersTableAdapter.Fill(dataSet1.Computers);
@@ -62,12 +55,12 @@ namespace ISVT.Forms
 
         private void View_Load(object sender, EventArgs e)
         {
-            tableLoader();
+            TableLoader();
         }
 
         private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tableLoader();
+            TableLoader();
         }
 
         private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
