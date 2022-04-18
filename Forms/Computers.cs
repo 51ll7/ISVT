@@ -20,9 +20,16 @@ namespace ISVT
 
         private void computersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            Validate();
-            computersBindingSource.EndEdit();
-            tableAdapterManager.UpdateAll(dataSet1);
+            try
+            {
+                Validate();
+                computersBindingSource.EndEdit();
+                tableAdapterManager.UpdateAll(dataSet1);
+            }
+            catch(System.Data.SqlClient.SqlException)
+            {
+                MessageBox.Show("Столбец IDRoom вышел за пределы General(ID).\nВведите существующий ID из таблицы помещений", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void Computers_Load(object sender, EventArgs e)

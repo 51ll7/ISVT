@@ -21,5 +21,5 @@ create table Components
 	Price money NOT NULL
 )
 
---DBCC CHECKIDENT ('[Computers]', RESEED, 3);
+--DBCC CHECKIDENT ('[General]', RESEED, 2);
 --GO
